@@ -52,23 +52,9 @@ const actions = {
         commit("setPhotos");
     },
 
-    addTodo({ commit }, title) {
-        const new_index =  state.photos.length;
-        const response =  {
-            "albumId": 1,
-            "id": new_index,
-            "title": title,
-            "url": "https://via.placeholder.com/600/92c952",
-            "thumbnailUrl": "https://via.placeholder.com/150/92c952"
-        }
-        commit("newPhoto",response);
-    },
-
 };
 const mutations = {
     setPhotos: (state) => state.photos,
-    newPhoto: (state, photo) => state.photos.push(photo),
-
 };
 
 export default {
